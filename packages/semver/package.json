@@ -1,0 +1,32 @@
+{
+  "name": "semver",
+  "version": "0.0.1",
+  "description": "semantic versioning 2.0 implementation",
+  "keywords": [
+    "semver"
+  ],
+  "author": "penghui <pzhang2@xiaohongshu.com>",
+  "homepage": "https://github.com/marked42/kaleidoscope#readme",
+  "license": "ISC",
+  "main": "lib/semver.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://npm.devops.xiaohongshu.com:7001"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marked42/kaleidoscope.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/marked42/kaleidoscope/issues"
+  }
+}
