@@ -1,8 +1,16 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "packages/**"
+  ],
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "build": "lerna run --stream --toposort build",
+    "clean": "yarn workspaces run clean",
+    "test:all": "yarn workspaces run test",
+    "test:changed": "lerna run test --since origin/master",
+    "version": "lerna version --conventional-commits --yes"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
@@ -12,13 +20,11 @@
     "husky": "^4.0.7",
     "lerna": "^3.20.2"
   },
-  "workspaces": [
-    "packages/**"
-  ],
   "husky": {
     "hooks": {
-      "pre-commit": "echo $HUSKY_GIT_PARAMS",
-      "commit-msg": "echo HUSKY_GIT_PARAMS && commitlint -E HUSKY_GIT_PARAMS"
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn run test:changed"
     }
   },
   "config": {
