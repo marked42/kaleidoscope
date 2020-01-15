@@ -2,6 +2,17 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.0.7",
     "lerna": "^3.20.2"
+  },
+  "workspaces": [
+    "packages/**"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "echo HUSKY_GIT_PARAMS && commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
