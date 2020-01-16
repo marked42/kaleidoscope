@@ -1,5 +1,5 @@
 {
-  "name": "semver",
+  "name": "@kaleidoscope/semver",
   "version": "0.0.0",
   "description": "semantic versioning 2.0 implementation",
   "keywords": [
