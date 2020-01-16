@@ -1,6 +1,6 @@
 {
   "name": "@kaleidoscope/semver",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "semantic versioning 2.0 implementation",
   "keywords": [
     "semver"
@@ -46,6 +46,5 @@
     "ts-jest": "^24.3.0",
     "tslib": "^1.10.0",
     "typescript": "^3.7.4"
-  },
-  "dependencies": {}
+  }
 }
