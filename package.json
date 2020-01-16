@@ -8,6 +8,7 @@
     "commit": "git-cz",
     "build": "lerna run --stream --toposort build",
     "clean": "yarn workspaces run clean",
+    "lint": "eslint --fix",
     "test:all": "yarn workspaces run test",
     "test:changed": "lerna run test --since origin/master",
     "version": "lerna version --conventional-commits --yes"
@@ -18,7 +19,9 @@
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
     "husky": "^4.0.7",
-    "lerna": "^3.20.2"
+    "lerna": "^3.20.2",
+    "lint-staged": "^9.5.0",
+    "yarn": "^1.21.1"
   },
   "husky": {
     "hooks": {
@@ -30,5 +33,11 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run lint",
+      "git add"
+    ]
   }
 }

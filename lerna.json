@@ -10,7 +10,7 @@
       "ignoreChanges": ["*.md"],
       "verifyAccess": false,
       "verifyRegistry": false,
-      "message": "chore: publish"
+      "message": "chore(release): publish"
     }
   }
 }
