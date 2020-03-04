@@ -27,6 +27,7 @@
   "scripts": {
     "dev": "rollup --config ./build/rollup.config.dev.js",
     "test": "jest --no-cache",
+    "test:watch": "jest --watch",
     "clean": "rimraf ./dist",
     "prebuild": "npm run clean",
     "build": "rollup --config ./build/rollup.config.prod.js"
